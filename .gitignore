@@ -1,0 +1,57 @@
+/node_modules/
+/dist/
+vendor/*
+composer.lock
+
+CHANGELOG.html
+README.html
+
+README.html
+
+# Mac Defaults
+.DS_Store
+.ds_store
+Thumbs.db
+
+# Codekit
+.sass-cache
+.codekit-cache
+config.codekit
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*.esproj
+*.tmproj
+*.cache
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
