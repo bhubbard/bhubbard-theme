@@ -7,7 +7,7 @@
 		"uuidString": "42C9FEE4-F969-47CA-A6CC-9423BF43F9E1"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
 	"\/.codeclimate.yml": {
 		"ft": 8192,
@@ -359,6 +359,12 @@
 		"oAP": "\/screenshot.png",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/single-jetpack-portfolio.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-jetpack-portfolio.php",
+		"oF": 0
 		},
 	"\/style.css": {
 		"aP": 1,
@@ -4739,6 +4745,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -5067,6 +5077,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -5160,6 +5174,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},

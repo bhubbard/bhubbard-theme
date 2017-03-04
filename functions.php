@@ -294,16 +294,6 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Front Page 1', 'bhubbard' ),
 	'description' => __( 'This is the 1st section on the front page.', 'bhubbard' ),
 ) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-2',
-	'name'        => __( 'Front Page 2', 'bhubbard' ),
-	'description' => __( 'This is the 2nd section on the front page.', 'bhubbard' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-3',
-	'name'        => __( 'Front Page 3', 'bhubbard' ),
-	'description' => __( 'This is the 3rd section on the front page.', 'bhubbard' ),
-) );
 
 
 

@@ -63,7 +63,7 @@ function bhubbard_front_page_genesis_meta() {
 		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 		// Add widgets on front page.
-		add_action( 'genesis_after_header', 'bhubbard_front_page_widgets' );
+		add_action( 'genesis_before_loop', 'bhubbard_front_page_widgets' );
 
 		$journal = get_option( 'bhubbard_journal_setting', 'true' );
 
@@ -109,33 +109,17 @@ function bhubbard_loop_body_class( $classes ) {
 // Add widgets on front page.
 function bhubbard_front_page_widgets() {
 
-	if ( get_query_var( 'paged' ) >= 2 ) {
-		return;
-	}
+	echo 'I am the CTO @ <a href="https://www.imforza.com/" target="_blank">imFORZA</a>, a small startup based out of beautiful <a href="http://en.wikipedia.org/wiki/El_Segundo,_California" target="_blank" rel="nofollow">El Segundo, CA</a>. When I am not coding or commuting on the 405 listening to <a href="http://twit.tv/" target="_blank" rel="nofollow">TWIT</a>, I love traveling or snowboarding the local mountains. I also enjoy long walks with my dog Dash. ';
 
-	echo '<h2 class="screen-reader-text">' . __( 'Main Content', 'bhubbard' ) . '</h2>';
-
-	genesis_widget_area( 'front-page-1', array(
-		'before' => '<div id="front-page-1" class="front-page-1"><div class="widget-area fadeup-effect"><div class="wrap">',
-		'after'  => '</div></div></div>',
-	) );
-
-	genesis_widget_area( 'front-page-2', array(
-		'before' => '<div id="front-page-2" class="front-page-2"><div class="wrap"><div class="flexible-widgets widget-area fadeup-effect' . bhubbard_halves_widget_area_class( 'front-page-2' ) . '">',
-		'after'  => '</div></div></div>',
-	) );
-
-	genesis_widget_area( 'front-page-3', array(
-		'before' => '<div id="front-page-3" class="front-page-3"><div class="wrap"><div class="flexible-widgets widget-area fadeup-effect' . bhubbard_widget_area_class( 'front-page-3' ) . '">',
-		'after'  => '</div></div></div>',
-	) );
+	echo '<hr>';
 
 }
 
 // Add opening markup for blog section.
 function bhubbard_front_page_blog_open() {
 
-	$journal_text = get_option( 'bhubbard_journal_text', __( 'Our Journal', 'bhubbard' ) );
+	$journal_text = get_option( 'bhubbard_journal_text', __( 'Recent Posts', 'bhubbard' ) );
+
 
 	if ( 'posts' == get_option( 'show_on_front' ) ) {
 
@@ -143,7 +127,7 @@ function bhubbard_front_page_blog_open() {
 
 		if ( ! empty( $journal_text ) ) {
 
-			echo '<h2 class="widgettitle widget-title center">' . $journal_text . '</h2>';
+			echo '<h3 class="widgettitle widget-title center">' . $journal_text . '</h3>';
 
 		}
 	}
@@ -156,6 +140,7 @@ function bhubbard_front_page_blog_close() {
 	if ( 'posts' == get_option( 'show_on_front' ) ) {
 
 		echo '</div></div>';
+
 
 	}
 
